@@ -22,7 +22,7 @@
 <target name="run" depends="jar" >
 	 <java jar="dist/AntSieve.jar" fork="true"/>
 </target>
-	
+
 <target name="build" description="build the source files ">
 	<javac includeantruntime="false" srcdir="src" destdir="bin" />
 </target>
