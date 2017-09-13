@@ -31,7 +31,6 @@ public class Program {
 		System.out.println("Welcome to the Sieve of Erastosthenes.");
 		System.out.println("  This program calculates all the prime numbers less than or equal to the integer given.");
 		interactive();
-
 	}
 
 }
