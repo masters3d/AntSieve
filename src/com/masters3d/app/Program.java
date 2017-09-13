@@ -1,13 +1,11 @@
 package com.masters3d.app;
 
-import java.util.ArrayList;
 import java.util.InputMismatchException;
-import java.util.List;
 import java.util.Scanner;
 
 public class Program {
 	
-	static public Scanner scanIn = new Scanner(System.in);
+	public static Scanner scanIn = new Scanner(System.in);
 	
 	public static void interactive(){
 		int valueInt = -1;
