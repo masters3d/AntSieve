@@ -5,7 +5,7 @@ import java.util.List;
 
 public class NonInteractive {
 
-	public static void main(String[] args) {
+	//public static void main(String[] args) {
 		System.out.println("Running automatic tests");
 		List<Integer> primesOf10 = new ArrayList<Integer>();
 		primesOf10.add(2);
