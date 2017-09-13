@@ -32,5 +32,4 @@ public class Program {
 		System.out.println("  This program calculates all the prime numbers less than or equal to the integer given.");
 		interactive();
 	}
-
 }
