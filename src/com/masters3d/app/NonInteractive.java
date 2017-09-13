@@ -11,7 +11,7 @@ public class NonInteractive {
 		primesOf10.add(2);
 		primesOf10.add(3);
 		primesOf10.add(5);
-		primesOf10.add(7);
+		//primesOf10.add(7);
 		List<Integer> primesOf10Result = (new Sieve(10)).getPrimes();
 		
 		if(!primesOf10.equals(primesOf10Result)){
