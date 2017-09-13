@@ -36,7 +36,10 @@
 	</target>
 
 	<target name="runTest" depends="jarForTest">
-		<java jar="dist/AntSieveTest.jar" fork="true" />
+		<java jar="dist/AntSieveTest.jar" 
+			fork="true"       
+			failonerror="yes"
+		/>
 	</target>
 
 </project>
