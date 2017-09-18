@@ -13,10 +13,18 @@ RUN apt-get update && \
     && \
     apt-get clean 
 
+# Setup Users
 RUN groupadd -r ant-dev && useradd -r -g ant-dev ant-dev
 
-# Setup Environment Variables
+# Setup SSH server options
+RUN mkdir /var/run/sshd
+RUN echo "AllowGroups ant-dev" >> /etc/ssh/sshd_config
+RUN echo 'ant-dev:devPassword' | chpasswd
 
+# SSH login fix. Otherwise user is kicked off after login
+RUN sed 's@session\s*required\s*pam_loginuid.so@session optional pam_loginuid.so@g' -i /etc/pam.d/sshd
+
+# Setup Environment Variables
 ENV WORK_DIR="/ant-dev"
 
 # Make dir and add permissions 
