@@ -1,19 +1,30 @@
 ## Ant Sieve
 
-## How to build
+## Password
 
+These is a default password set here in the dockerfile.  
+Please change before using.
+
+### How to build
 `docker build -t ant-dev .`
-### The P here is needed to expose the ports
-`docker run -P ant-dev`
 
-### This is how you get into the container
-`docker run -it ant-dev bash`
-
-### This is how you run the container
+### This is how you run the container on the background
 `docker run -d -P --name ant-dev ant-dev`
-## Once it is running you can connect with
+
+The P here is needed to expose the ports
+If you only want to run on the foreground:  
+`docker run -P -it ant-dev bash`
+
+### Once it is running you can connect with
 You need to get the host mapping of the 22 port.
-`ssh ant-dev@localhost -p 32773`
+`ssh ant-dev@0.0.0.0 -p 32773`
+
+### To stop you can use the
+`docker stop ant-dev`
+
+### To restart
+`docker restart ant-dev`
+This will restart the container with the same options that when it was created. For example: expose ports will be visible.
 
 ### References
 
