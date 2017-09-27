@@ -1,9 +1,8 @@
 ## Ant Sieve
 
-## Password
-
-These is a default password set here in the dockerfile.  
-Please change before using.
+## Password for the user
+Please change the default password in the `dockerfile` before building.
+`ant-dev:devPassword`
 
 ### How to build
 `docker build -t ant-dev .`
@@ -19,7 +18,7 @@ If you only want to run on the foreground:
 You need to get the host mapping of the 22 port.
 `ssh ant-dev@0.0.0.0 -p 32773`
 
-### To stop you can use the
+### To stop you can use this command:
 `docker stop ant-dev`
 
 ### To restart
